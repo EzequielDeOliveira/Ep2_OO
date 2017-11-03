@@ -1,5 +1,24 @@
 package model;
 
-public class OndaDaCorrente {
+import java.util.ArrayList;
 
+public class OndaDaCorrente extends FormaDeOnda {
+
+	OndaDaCorrente(){}
+	
+	public ArrayList<Double> GeraListaCorrente(int corrente, int angulocorrente) {
+		
+		amplitude.setAmplitudeCorrente(corrente);
+		angulo.setAnguloCorrente(angulocorrente);
+		
+		for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;   setTempoVariavel((float) (getTempoVariavel() + 0.1))) {
+		
+		pontosNoGrafico.add(amplitude.getAmplitudeCorrente() * Math.cos(frequenciaAngular * getTempoVariavel() + angulo.getAnguloCorrente()));	
+	}
+		return pontosNoGrafico;
+		
+	}
+	
+	
+	
 }
