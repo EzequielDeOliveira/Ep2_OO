@@ -16,10 +16,11 @@ public class TensaoDeOrdemHarmonica extends FormaDeOnda {
 		this.ordemHarmonica = ordemHarmonica;
 	}
 	
-	public ArrayList<Double> GeralistaOrdemHarmonica(int tensao, int anguloharmonico){
+	public ArrayList<Double> GeralistaOrdemHarmonica(int tensao, int anguloharmonico , int ordemharmonica){
 		
 		amplitude.setAmplitudeTensao(tensao);
 		angulo.setAnguloHarmonico(anguloharmonico);
+		setOrdemHarmonica(ordemharmonica);
 		
 		for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;   setTempoVariavel((float) (getTempoVariavel() + 0.1))) {
 		
