@@ -8,7 +8,7 @@ public class FatorDePotencia  {
 	
 	public float CalcularFatorDePotencia(int anguloTensao, int anguloCorrente) {
 		
-		fatorDePotencia = (float) Math.cos(anguloTensao - anguloCorrente);
+		fatorDePotencia = (float) Math.cos(Math.toRadians(anguloTensao - anguloCorrente));
 		
 		return fatorDePotencia;
 	}
