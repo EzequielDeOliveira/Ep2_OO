@@ -21,7 +21,7 @@ public class PotenciaAtiva extends ValorDaPotencia {
 		amplitude.setAmplitudeTensao(tensao);
 		amplitude.setAmplitudeCorrente(corrente);
 		angulo.setAnguloTensao(angulotensao);
-		angulo.setAnguloCorrente(corrente);
+		angulo.setAnguloCorrente(angulocorrente);
 		
 		potenciaAtiva = Calcular(amplitude.getAmplitudeTensao(),amplitude.getAmplitudeCorrente(),angulo.getAnguloTensao(),angulo.getAnguloCorrente());
 		
