@@ -13,7 +13,7 @@ public class OndaDaCorrente extends FormaDeOnda {
 		
 		for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;   setTempoVariavel((float) (getTempoVariavel() + 0.1))) {
 		
-		pontosNoGrafico.add(amplitude.getAmplitudeCorrente() * Math.cos(frequenciaAngular * getTempoVariavel() + angulo.getAnguloCorrente()));	
+		pontosNoGrafico.add(amplitude.getAmplitudeCorrente() * Math.cos(Math.toRadians(frequenciaAngular) * getTempoVariavel() + Math.toRadians(angulo.getAnguloCorrente())));	
 	}
 		return pontosNoGrafico;
 		
