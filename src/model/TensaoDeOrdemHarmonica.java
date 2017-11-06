@@ -24,7 +24,7 @@ public class TensaoDeOrdemHarmonica extends FormaDeOnda {
 		
 		for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;   setTempoVariavel((float) (getTempoVariavel() + 0.1))) {
 		
-		pontosNoGrafico.add(amplitude.getAmplitudeTensao() * Math.cos(getOrdemHarmonica()*frequenciaAngular * getTempoVariavel() + angulo.getAnguloHarmonico()));	
+		pontosNoGrafico.add(amplitude.getAmplitudeTensao() * Math.cos(Math.toRadians(getOrdemHarmonica()*frequenciaAngular) * getTempoVariavel() + Math.toRadians(angulo.getAnguloHarmonico())));	
 	}
 		
 		return pontosNoGrafico;
