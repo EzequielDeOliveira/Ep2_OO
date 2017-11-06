@@ -13,7 +13,7 @@ public class OndaDeTensao extends FormaDeOnda{
 		
 		for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;   setTempoVariavel((float) (getTempoVariavel() + 0.1))) {
 		
-		pontosNoGrafico.add(amplitude.getAmplitudeTensao() * Math.cos(frequenciaAngular * getTempoVariavel() + angulo.getAnguloTensao()));	
+		pontosNoGrafico.add(amplitude.getAmplitudeTensao() * Math.cos(frequenciaAngular * getTempoVariavel() +Math.toRadians(angulo.getAnguloTensao())));	
 	}
 		return pontosNoGrafico;
 		
