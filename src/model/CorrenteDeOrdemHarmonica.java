@@ -24,7 +24,7 @@ public class CorrenteDeOrdemHarmonica extends FormaDeOnda{
 		
 		for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;   setTempoVariavel((float) (getTempoVariavel() + 0.1))) {
 		
-		pontosNoGrafico.add(amplitude.getAmplitudeCorrente() * Math.cos(getOrdemHarmonica()*frequenciaAngular * getTempoVariavel() + angulo.getAnguloHarmonico()));	
+		pontosNoGrafico.add(amplitude.getAmplitudeCorrente() * Math.cos(Math.toRadians(getOrdemHarmonica()*frequenciaAngular * getTempoVariavel() + angulo.getAnguloHarmonico())));	
 	}
 		
 		return pontosNoGrafico;
