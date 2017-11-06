@@ -3,15 +3,15 @@ package model;
 public class PotenciaReativa extends ValorDaPotencia {
 	
 	private float potenciaReativa;
-	private float P;
+	private float Q;
 	
 	PotenciaReativa(){}
 	
 	public float Calcular(int tensao , int corrente , int angulotensao , int angulocorrente) {
 		
-		P = (float) (tensao * corrente * Math.sin(angulotensao - angulocorrente)) ;
+		Q = (float) (tensao * corrente * Math.sin(Math.toRadians(angulotensao - angulocorrente))) ;
 		
-		return P;
+		return Q;
 		
 	}
 	
