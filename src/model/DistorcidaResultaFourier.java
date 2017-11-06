@@ -9,6 +9,11 @@ public class DistorcidaResultaFourier extends FormaDeOnda {
 	ArrayList<Double> listaTensao = new ArrayList<Double>();
 	ArrayList<Double> listaTensaoHarmonica = new ArrayList<Double>();
 	ArrayList<Double> listaResultante = new ArrayList<Double>();
+	String resultante = new String();
+	String tensaotxt = new String();
+	String anguloTensaotxt = new String();
+	String anguloHarmonicotxt = new String();
+	String ordemHarmonicotxt = new String();
 
 	
 	DistorcidaResultaFourier(){}
@@ -116,5 +121,186 @@ public class DistorcidaResultaFourier extends FormaDeOnda {
 		
 	}
 	
+	public String FourierResultanteUmHarmonico(int tensao , int angulotensao , int anguloharmonica , int ordemharmonica , int tensaoharmonica){
+		
+		tensaotxt = String.valueOf(tensao);
+		anguloTensaotxt = String.valueOf(angulotensao);
+		
+		if(angulotensao < 0) {
+			
+	    resultante = tensaotxt +"cos" + "(" + "w" + "t" + "-" + anguloTensaotxt + "°" + ")";
+			
+		}else {
+			
+			resultante = tensaotxt +"cos" + "(" + "w" + "t" + "+" + anguloTensaotxt + "°" + ")";
+			
+		}
+		
+		
+		
+		tensaotxt = String.valueOf(tensaoharmonica);
+		ordemHarmonicotxt = String.valueOf(ordemharmonica);
+		anguloHarmonicotxt = String.valueOf(anguloharmonica);
+		
+		if(tensaoharmonica < 0) {
+			
+			resultante = resultante + "-" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+			
+		}else if(anguloharmonica < 0) {
+			
+			resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "-" + anguloHarmonicotxt + "°" + ")"; 
+			
+		}else 
+		{
+			
+			resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+			
+		}
+
+			
+				
+	   return resultante;
+	
+	}
+	
+	public String FourierResultanteDoisHarmonicos(int tensao , int angulotensao , int anguloharmonica , int anguloharmonica2 , int ordemharmonica , int ordemharmonica2 , int tensaoharmonica, int tensaoharmonica2){
+		 
+	 resultante = FourierResultanteUmHarmonico(tensao , angulotensao , anguloharmonica , ordemharmonica ,tensaoharmonica);
+	 tensaotxt = String.valueOf(tensaoharmonica2);
+     ordemHarmonicotxt = String.valueOf(ordemharmonica2);
+     anguloHarmonicotxt = String.valueOf(anguloharmonica2);
+     
+     
+     if(tensaoharmonica2 < 0) {
+			
+			resultante = resultante + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+			
+		}else if(anguloharmonica2 < 0) {
+			
+			resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + anguloHarmonicotxt + "°" + ")"; 
+			
+		}else 
+		{
+			
+			resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+			
+		}
+ 
+  
+	   return resultante;
+	
+	}
+	
+	public String FourierResultanteTresHarmonicos(int tensao , int angulotensao , int anguloharmonica , int anguloharmonica2 , int anguloharmonica3 , int ordemharmonica , int ordemharmonica2 , int ordemharmonica3 , int tensaoharmonica, int tensaoharmonica2 , int tensaoharmonica3){
+		 
+		 resultante = FourierResultanteDoisHarmonicos( tensao ,  angulotensao , anguloharmonica ,  anguloharmonica2 ,  ordemharmonica , ordemharmonica2 ,tensaoharmonica,tensaoharmonica2);
+		 tensaotxt = String.valueOf(tensaoharmonica3);
+	     ordemHarmonicotxt = String.valueOf(ordemharmonica3);
+	     anguloHarmonicotxt = String.valueOf(anguloharmonica3);
+	     
+	     
+	     if(tensaoharmonica3 < 0) {
+				
+				resultante = resultante + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}else if(anguloharmonica3 < 0) {
+				
+				resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}else 
+			{
+				
+				resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}
+	 
+	  
+		   return resultante;
+		
+		}
+	
+	public String FourierResultanteQuatroHarmonicos(int tensao , int angulotensao , int anguloharmonica , int anguloharmonica2 , int anguloharmonica3 , int anguloharmonica4 , int ordemharmonica , int ordemharmonica2 , int ordemharmonica3 , int ordemharmonica4 , int tensaoharmonica, int tensaoharmonica2 , int tensaoharmonica3 ,int tensaoharmonica4){
+		 
+		 resultante = FourierResultanteTresHarmonicos( tensao ,  angulotensao ,  anguloharmonica , anguloharmonica2 ,  anguloharmonica3 , ordemharmonica , ordemharmonica2 ,  ordemharmonica3 , tensaoharmonica, tensaoharmonica2 ,tensaoharmonica3);
+		 tensaotxt = String.valueOf(tensaoharmonica4);
+	     ordemHarmonicotxt = String.valueOf(ordemharmonica4);
+	     anguloHarmonicotxt = String.valueOf(anguloharmonica4);
+	     
+	     
+	     if(tensaoharmonica4 < 0) {
+				
+				resultante = resultante + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}else if(anguloharmonica4 < 0) {
+				
+				resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}else 
+			{
+				
+				resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}
+	 
+	  
+		   return resultante;
+		
+		}
+	
+	public String FourierResultanteCincoHarmonicos(int tensao , int angulotensao , int anguloharmonica , int anguloharmonica2 , int anguloharmonica3 , int anguloharmonica4 ,int anguloharmonica5 ,  int ordemharmonica , int ordemharmonica2 , int ordemharmonica3 , int ordemharmonica4 , int ordemharmonica5 ,int tensaoharmonica, int tensaoharmonica2 , int tensaoharmonica3 ,int tensaoharmonica4 , int tensaoharmonica5){
+		 
+		 resultante = FourierResultanteQuatroHarmonicos( tensao ,  angulotensao ,  anguloharmonica ,  anguloharmonica2 , anguloharmonica3 , anguloharmonica4 , ordemharmonica , ordemharmonica2 ,  ordemharmonica3 , ordemharmonica4 ,  tensaoharmonica, tensaoharmonica2 , tensaoharmonica3 ,tensaoharmonica4);
+		 tensaotxt = String.valueOf(tensaoharmonica5);
+	     ordemHarmonicotxt = String.valueOf(ordemharmonica5);
+	     anguloHarmonicotxt = String.valueOf(anguloharmonica5);
+	     
+	     
+	     if(tensaoharmonica5 < 0) {
+				
+				resultante = resultante + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}else if(anguloharmonica5 < 0) {
+				
+				resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}else 
+			{
+				
+				resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}
+	 
+	  
+		   return resultante;
+		
+		}
+	
+	public String FourierResultanteSeisHarmonicos(int tensao , int angulotensao , int anguloharmonica , int anguloharmonica2 , int anguloharmonica3 , int anguloharmonica4 ,int anguloharmonica5 , int anguloharmonica6 ,  int ordemharmonica , int ordemharmonica2 , int ordemharmonica3 , int ordemharmonica4 , int ordemharmonica5 , int ordemharmonica6 , int tensaoharmonica, int tensaoharmonica2 , int tensaoharmonica3 ,int tensaoharmonica4 , int tensaoharmonica5 , int tensaoharmonica6 ){
+		 
+		 resultante =  FourierResultanteCincoHarmonicos( tensao ,  angulotensao , anguloharmonica , anguloharmonica2 ,anguloharmonica3 , anguloharmonica4 ,anguloharmonica5 , ordemharmonica ,  ordemharmonica2 , ordemharmonica3 , ordemharmonica4 ,ordemharmonica5 ,tensaoharmonica, tensaoharmonica2 , tensaoharmonica3 , tensaoharmonica4 ,tensaoharmonica5);
+		 tensaotxt = String.valueOf(tensaoharmonica6);
+	     ordemHarmonicotxt = String.valueOf(ordemharmonica6);
+	     anguloHarmonicotxt = String.valueOf(anguloharmonica6);
+	     
+	     
+	     if(tensaoharmonica6 < 0) {
+				
+				resultante = resultante + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}else if(anguloharmonica6 < 0) {
+				
+				resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}else 
+			{
+				
+				resultante = resultante + "+" + tensaotxt + "cos" + "(" + ordemHarmonicotxt + "w" + "t" + "+" + anguloHarmonicotxt + "°" + ")"; 
+				
+			}
+	 
+	  
+		   return resultante;
+		
+		}
 
 }
