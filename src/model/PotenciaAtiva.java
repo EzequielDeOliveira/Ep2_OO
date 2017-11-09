@@ -5,7 +5,7 @@ public class PotenciaAtiva extends ValorDaPotencia {
 	private float potenciaAtiva;
 	FatorDePotencia Fp = new FatorDePotencia();
 	
-	PotenciaAtiva(){}
+	public PotenciaAtiva(){}
 	
 	public float Calcular(int tensao , int corrente , int angulotensao , int angulocorrente) {
 	 float P;

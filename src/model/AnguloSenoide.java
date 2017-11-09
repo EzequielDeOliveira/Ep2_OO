@@ -6,7 +6,7 @@ public class AnguloSenoide {
 	private int AnguloCorrente;
 	private int AnguloHarmonico;
 	
-	AnguloSenoide(){}
+	public AnguloSenoide(){}
 
 	public int getAnguloTensao() {
 		return AnguloTensao;
