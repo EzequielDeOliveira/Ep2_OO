@@ -5,9 +5,6 @@ import java.util.List;
 
 import javax.swing.JFrame;
 
-import view.TelaInicio;
-
-
 public class teste {
 
 	public static void main(String[] args) {
@@ -45,14 +42,13 @@ String b = new String();
 		System.out.println(teste.FourierResultanteSeisHarmonicos(10, 20, 30, 40, 40, 20, -50,80, 90, 5, 6, 2,1, 0, 220,140, 110,100,80, -15));
 	*/
 		
-		JFrame teste  = new JFrame();
-		teste = new JFrame("QEE");
-		teste.setSize(1000, 600);
-		teste.setLocationRelativeTo(null);
-		teste.setResizable(true);
-		teste.setVisible(true);
-		TelaInicio tela = new TelaInicio(teste);
-		
+		List<Double> scores = new ArrayList<>();		
+
+        for (float i = 0; i < 10; i = (float) (i + 0.1)) {
+            scores.add(Math.cos(i));
+        }
+
+		View view = new View(scores);
 		
 	
 	

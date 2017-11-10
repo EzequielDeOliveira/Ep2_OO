@@ -7,25 +7,27 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-public class VerGrafico {
+
+public class VisualizaGrafico {
+
 	private JFrame mainFrame;
-	private DesenhaGrafico graphPanel;
+	private DesenharGrafico graphPanel;
 	private JPanel mainPanel;
 	
-	public VerGrafico(List<Double> points) {
+	public VisualizaGrafico(List<Double> points) {
 		buildGraph(points);
 	}
 
 	private void buildGraph(List<Double> points) {
-		this.mainFrame = new JFrame("Exemplo Gráfico java");
+		this.mainFrame = new JFrame("Exemplo");
 		this.mainFrame.setSize(800, 600);
-        this.mainFrame.setLocation(293, 70);
 
 		mainPanel = new JPanel(new GridLayout(1, 1));
-		graphPanel = new DesenhaGrafico(points);
+		graphPanel = new DesenharGrafico(points);
 		mainPanel.add(graphPanel);
 		mainFrame.add(mainPanel);
 		mainFrame.setVisible(true);
 	}
 
+	
 }
