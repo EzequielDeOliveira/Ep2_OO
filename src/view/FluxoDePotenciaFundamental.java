@@ -30,7 +30,7 @@ public class FluxoDePotenciaFundamental {
 	 JPanel esquerdaSuperior2 = new JPanel();
 	 JPanel direitaSuperior1 = new JPanel();
 	 JPanel direitaSuperior2 = new JPanel();
-	 ArrayList<Double> listaInicial = new  ArrayList<Double> ();
+
 	 DesenharGrafico graficoTensao;
 	 DesenharGrafico graficoCorrente;
 	 DesenharGrafico graficoPotenciaInstantanea;
@@ -156,28 +156,31 @@ public class FluxoDePotenciaFundamental {
 	 
 	 public void atualizaGraficoTensao() {
 		
-		for(float i = 0; i < 10; i = (float) (i + 0.1)) {
-			 
-			 listaInicial.add(Math.cos(i));
-			 
-		 }
-		
 		 direitaSuperior1.setLayout(null);
 		 
-		 graficoTensao = new DesenharGrafico(listaInicial);
+		 graficoTensao = new DesenharGrafico(scoresInit());
 		 graficoTensao.mudaCor(Color.RED);
 		 
-		graficoTensao.setSize(300, 270);
+		graficoTensao.setBounds(50, 10, 400,150);
 		 
 		 direitaSuperior1.add(graficoTensao);
 		 
 		 superior1.add(direitaSuperior1);
 		 
-		 
-		
-		 		 
-		 
 	 }
+	 
+		public static ArrayList<Double> scoresInit() {
+			ArrayList<Double> scores = new ArrayList<>();
+			Double value;
+			
+			for (double i=0; i<70; i=i+0.5) {
+				value = (double) 0;
+				scores.add((double) value);
+			}
+			
+			return scores;
+		}
+		
 	 
 
 }
