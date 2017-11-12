@@ -1,5 +1,6 @@
 package modelTests;
 
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Before;
@@ -12,20 +13,22 @@ import model.AnguloSenoide;
 import model.PotenciaAtiva;
 
 class PotenciaAtivaTest {
-	Amplitude amplitude = new Amplitude();
-	AnguloSenoide angulo = new AnguloSenoide();
-	PotenciaAtiva potencia;
+	int tensao;
+	int corrente;
+	int anguloTensao;
+	int anguloCorrente;
 	int potenciaAtiva;
+	PotenciaAtiva potencia;
 	int resultado;
 	
 	
 	@BeforeEach
 	void BeforeTests() {
 		//Preparação
-		amplitude.setAmplitudeTensao(220);
-		amplitude.setAmplitudeCorrente(39);
-		angulo.setAnguloTensao(0);
-		angulo.setAnguloCorrente(35);
+		tensao = 220;
+		corrente = 39;
+		anguloTensao = 0;
+		anguloCorrente = 35;
 		potenciaAtiva = 7028;
 		potencia = new PotenciaAtiva();
 		
@@ -36,11 +39,11 @@ class PotenciaAtivaTest {
 	void CalculaPotenciaAtivatest() {
 		
 		//ação
-		resultado = (int) potencia.CalcularPotenciaAtiva(amplitude.getAmplitudeTensao(), amplitude.getAmplitudeCorrente(),angulo.getAnguloTensao(),angulo.getAnguloCorrente());
+	 resultado =  (int) potencia.CalcularPotenciaAtiva(tensao,corrente,anguloTensao,anguloCorrente);
 		
 		//Verificaçao
 		
-		assertEquals(resultado,potenciaAtiva);
+		assertEquals(potenciaAtiva,resultado);
 		
 		
 	}
@@ -48,8 +51,6 @@ class PotenciaAtivaTest {
 	@AfterEach
 	void afterTests() {
 		potencia = null;
-		amplitude = null;
-		angulo = null;
 		
 	}
 	

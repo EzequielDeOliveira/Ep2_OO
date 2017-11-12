@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class FormaDeOnda {
+public abstract class FormaDeOnda {
 	 
 	 protected Amplitude amplitude = new Amplitude();
 	 protected AnguloSenoide angulo = new AnguloSenoide();

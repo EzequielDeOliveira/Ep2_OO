@@ -5,7 +5,7 @@ public class Amplitude {
 	private int amplitudeTensao;
 	private int amplitudeCorrente;
 	
-	Amplitude(){}
+	public Amplitude(){}
 	
 	public int getAmplitudeTensao() {
 		return amplitudeTensao;

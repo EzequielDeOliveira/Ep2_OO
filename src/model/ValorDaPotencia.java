@@ -1,6 +1,6 @@
 package model;
 
-public class ValorDaPotencia {
+public abstract class ValorDaPotencia {
 	
 	Amplitude amplitude = new Amplitude();
 	AnguloSenoide angulo = new AnguloSenoide();		

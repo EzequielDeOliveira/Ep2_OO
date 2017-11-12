@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class OndaDeTensao extends FormaDeOnda{
 	
-	OndaDeTensao(){}
+	public OndaDeTensao(){}
 	
 	public ArrayList<Double> GeraListaTensao(int tensao, int angulotensao) {
 		

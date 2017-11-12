@@ -1,9 +1,12 @@
-package model;
+package main;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JFrame;
+
+import model.ConstroiGrafico;
+import view.TelaPrincipal;
 
 public class teste {
 
@@ -41,16 +44,18 @@ String b = new String();
 		DistorcidaResultaFourier teste = new DistorcidaResultaFourier();
 		System.out.println(teste.FourierResultanteSeisHarmonicos(10, 20, 30, 40, 40, 20, -50,80, 90, 5, 6, 2,1, 0, 220,140, 110,100,80, -15));
 	*/
-		
+/*
 		List<Double> scores = new ArrayList<>();		
 
         for (float i = 0; i < 10; i = (float) (i + 0.1)) {
             scores.add(Math.cos(i));
         }
 
-		View view = new View(scores);
+		ConstroiGrafico view = new ConstroiGrafico(scores);
 		
-	
+	*/
+		
+		TelaPrincipal teste = new TelaPrincipal();
 	
 	}
 }
