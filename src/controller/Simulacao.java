@@ -1,5 +1,6 @@
 package controller;
 
+import java.awt.List;
 import java.util.ArrayList;
 
 import model.OndaDeTensao;
@@ -14,7 +15,7 @@ public abstract class Simulacao {
 		
 	}
 	
-	
+
 	
 	
 }
