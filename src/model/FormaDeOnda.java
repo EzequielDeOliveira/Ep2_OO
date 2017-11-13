@@ -10,6 +10,7 @@ public abstract class FormaDeOnda {
 	private float tempoVariavel;
 	protected float frequenciaAngular = (float) (2 * Math.PI * 60);
 	int MaximoDepontos = 10;
+	float i;
 	
 	public float getTempoVariavel() {
 		return tempoVariavel;
