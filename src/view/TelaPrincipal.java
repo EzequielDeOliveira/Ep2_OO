@@ -9,7 +9,7 @@ public class TelaPrincipal {
 		JFrame telaPrincipal = new JFrame("QEE");
 		telaPrincipal.setSize(1000, 600);
 		telaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		FluxoDePotenciaFundamental teste = new FluxoDePotenciaFundamental(telaPrincipal);
+		TelaInicial teste = new TelaInicial(telaPrincipal);
 		//telaPrincipal.setVisible(true);
 		
 	}

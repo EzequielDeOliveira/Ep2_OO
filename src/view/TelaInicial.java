@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
@@ -10,15 +11,22 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
+import controller.acoesInterfaceInicial;
+
 public class TelaInicial {
 	
-	TelaInicial(JFrame framePrincipal){
+	public TelaInicial(JFrame framePrincipal){
 		
-		framePrincipal.setLayout(new GridLayout(4,1));
+		framePrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		framePrincipal.setLayout(new FlowLayout());
+		
+		JPanel painelPrincipal = new JPanel(new GridLayout(4,1));
 		
 		JPanel primeiroPainel = new JPanel();
 		JPanel primeiroPainelColuna1 = new JPanel();
 		JButton fluxoDePotenciaFundamental = new JButton("Fluxo de potência fundamental");
+		fluxoDePotenciaFundamental.setActionCommand("fluxo de potencia fundamental");
+		fluxoDePotenciaFundamental.addActionListener(new acoesInterfaceInicial(framePrincipal,painelPrincipal));
 		
 		JPanel segundoPainel = new JPanel();
 		JPanel segundoPainelColuna1 = new JPanel();
@@ -83,19 +91,19 @@ public class TelaInicial {
 		segundoPainel.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
 		terceiroPainel.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
 		
-		framePrincipal.add(texto);
+		painelPrincipal.add(texto);
 		primeiroPainel.add(primeiroPainelColuna1);
 		primeiroPainel.add(fluxoDePotenciaFundamental);
 		segundoPainel.add(segundoPainelColuna1);
 		segundoPainel.add(distorcaoHarmonica);
 		terceiroPainel.add(terceiroPainelColuna1);
 		terceiroPainel.add(fluxoDePotenciaHarmonico);
-		framePrincipal.add(primeiroPainel);
-		framePrincipal.add(segundoPainel);
-		framePrincipal.add(terceiroPainel);
+		painelPrincipal.add(primeiroPainel);
+		painelPrincipal.add(segundoPainel);
+		painelPrincipal.add(terceiroPainel);
 
 		
-		
+		framePrincipal.add(painelPrincipal);
 		
 		
 		framePrincipal.setVisible(true);
