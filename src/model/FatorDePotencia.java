@@ -3,7 +3,7 @@ package model;
 public class FatorDePotencia  {
 	
 	private float fatorDePotencia;
-	FatorDePotencia(){}
+	public FatorDePotencia(){}
 	
 	
 	public float CalcularFatorDePotencia(int anguloTensao, int anguloCorrente) {

@@ -5,7 +5,7 @@ public class PotenciaAparente extends ValorDaPotencia {
 	private float PotenciaAparente;
 	private float S;
 	
-	PotenciaAparente(){}
+	public PotenciaAparente(){}
 
 	public float Calcular(int tensao , int corrente) {
 		
@@ -25,5 +25,5 @@ public class PotenciaAparente extends ValorDaPotencia {
 		return PotenciaAparente;
 		
 	}
-	
+
 }

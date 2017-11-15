@@ -26,7 +26,7 @@ public class DistorcidaResultaFourier extends FormaDeOnda {
 		listaTensao = ondaDaTensao.GeraListaTensao(amplitude.getAmplitudeTensao(),angulo.getAnguloTensao());
 		listaTensaoHarmonica = tensaoHarmonica.GeralistaOrdemHarmonica(amplitude.getAmplitudeTensao(), angulo.getAnguloHarmonico() ,ordemharmonica);
 		
-		for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;setTempoVariavel(getTempoVariavel() + 1)) {
+		for(setTempoVariavel(0); getTempoVariavel() < getMaximoDepontos() ;setTempoVariavel(getTempoVariavel() + 1)) {
 			
 			pontosNoGrafico.add(listaTensao.get((int) getTempoVariavel()) + listaTensaoHarmonica.get((int) getTempoVariavel()));
 				
@@ -43,7 +43,7 @@ public class DistorcidaResultaFourier extends FormaDeOnda {
 		
 		listaResultante = GeraListaDistorcidaResultanteUmHarmonico(tensao,angulotensao,anguloharmonico,ordemharmonica);
 		listaTensaoHarmonica = tensaoHarmonica.GeralistaOrdemHarmonica(amplitude.getAmplitudeTensao(), angulo.getAnguloHarmonico(), ordemharmonica2);
-		for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;setTempoVariavel(getTempoVariavel() + 1)) {
+		for(setTempoVariavel(0); getTempoVariavel() < getMaximoDepontos() ;setTempoVariavel(getTempoVariavel() + 1)) {
 			
 			pontosNoGrafico.add(listaTensaoHarmonica.get((int) getTempoVariavel()) + listaResultante.get((int) getTempoVariavel()));
 				
@@ -61,7 +61,7 @@ public class DistorcidaResultaFourier extends FormaDeOnda {
 		listaResultante = GeraListaDistorcidaResultanteDoisHarmonicos(tensao , tensao2 ,angulotensao ,angulotensao2, anguloharmonico ,anguloharmonica2 ,ordemharmonica , ordemharmonica2);
 		listaTensaoHarmonica = tensaoHarmonica.GeralistaOrdemHarmonica(amplitude.getAmplitudeTensao(), angulo.getAnguloHarmonico(), ordemharmonica3);
 		
-	for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;setTempoVariavel(getTempoVariavel() + 1)) {
+	for(setTempoVariavel(0); getTempoVariavel() < getMaximoDepontos() ;setTempoVariavel(getTempoVariavel() + 1)) {
 			
 			pontosNoGrafico.add(listaTensaoHarmonica.get((int) getTempoVariavel()) + listaResultante.get((int) getTempoVariavel()));
 				
@@ -78,7 +78,7 @@ public class DistorcidaResultaFourier extends FormaDeOnda {
 		listaResultante = GeraListaDistorcidaResultanteTresHarmonicos(tensao , tensao2 ,tensao3 , angulotensao ,angulotensao2, angulotensao3, anguloharmonico ,anguloharmonica2 ,anguloharmonica3 , ordemharmonica , ordemharmonica2 , ordemharmonica3);
 		listaTensaoHarmonica = tensaoHarmonica.GeralistaOrdemHarmonica(amplitude.getAmplitudeTensao(), angulo.getAnguloHarmonico(), ordemharmonica3);
 		
-	for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;setTempoVariavel(getTempoVariavel() + 1)) {
+	for(setTempoVariavel(0); getTempoVariavel() < getMaximoDepontos() ;setTempoVariavel(getTempoVariavel() + 1)) {
 			
 			pontosNoGrafico.add(listaTensaoHarmonica.get((int) getTempoVariavel()) + listaResultante.get((int) getTempoVariavel()));
 				
@@ -95,7 +95,7 @@ public class DistorcidaResultaFourier extends FormaDeOnda {
 		listaResultante = GeraListaDistorcidaResultanteQuatroHarmonicos(tensao , tensao2 ,tensao3 , tensao4 ,  angulotensao ,angulotensao2, angulotensao3, angulotensao4 , anguloharmonico ,anguloharmonica2 ,anguloharmonica3 , anguloharmonica4 , ordemharmonica , ordemharmonica2 , ordemharmonica3, ordemharmonica4);
 		listaTensaoHarmonica = tensaoHarmonica.GeralistaOrdemHarmonica(amplitude.getAmplitudeTensao(), angulo.getAnguloHarmonico(), ordemharmonica3);
 		
-	for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;setTempoVariavel(getTempoVariavel() + 1)) {
+	for(setTempoVariavel(0); getTempoVariavel() < getMaximoDepontos() ;setTempoVariavel(getTempoVariavel() + 1)) {
 			
 			pontosNoGrafico.add(listaTensaoHarmonica.get((int) getTempoVariavel()) + listaResultante.get((int) getTempoVariavel()));
 				
@@ -112,7 +112,7 @@ public class DistorcidaResultaFourier extends FormaDeOnda {
 		listaResultante = GeraListaDistorcidaResultanteCincoHarmonicos(tensao , tensao2 ,tensao3 , tensao4 , tensao5,  angulotensao ,angulotensao2, angulotensao3, angulotensao4, angulotensao5 , anguloharmonico ,anguloharmonica2 ,anguloharmonica3 , anguloharmonica4 , anguloharmonica5 ,  ordemharmonica , ordemharmonica2 , ordemharmonica3, ordemharmonica4 , ordemharmonica5);
 		listaTensaoHarmonica = tensaoHarmonica.GeralistaOrdemHarmonica(amplitude.getAmplitudeTensao(), angulo.getAnguloHarmonico(), ordemharmonica3);
 		
-	for(setTempoVariavel(0); getTempoVariavel() < MaximoDepontos ;setTempoVariavel(getTempoVariavel() + 1)) {
+	for(setTempoVariavel(0); getTempoVariavel() < getMaximoDepontos() ;setTempoVariavel(getTempoVariavel() + 1)) {
 			
 			pontosNoGrafico.add(listaTensaoHarmonica.get((int) getTempoVariavel()) + listaResultante.get((int) getTempoVariavel()));
 				

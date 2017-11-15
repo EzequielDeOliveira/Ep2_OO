@@ -5,7 +5,7 @@ public class PotenciaReativa extends ValorDaPotencia {
 	private float potenciaReativa;
 	private float Q;
 	
-	PotenciaReativa(){}
+	public PotenciaReativa(){}
 	
 	public float Calcular(int tensao , int corrente , int angulotensao , int angulocorrente) {
 		
