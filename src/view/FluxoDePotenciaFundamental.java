@@ -69,9 +69,18 @@ public class FluxoDePotenciaFundamental {
 	DesenharGrafico graficoPotenciaInstantanea = new DesenharGrafico(scoresInit(), true);
 	SimulaFluxoDePotenciaFundamental potenciaFundamental = new SimulaFluxoDePotenciaFundamental();
 
-	public FluxoDePotenciaFundamental(JFrame telaPrincipal) {
+	JFrame telaPrincipal = new JFrame();
+	
+	public FluxoDePotenciaFundamental() {
+		
+		PreparaTela(telaPrincipal);
+		
+	}
+		
+		
+		public void PreparaTela(JFrame telaPrincipal) {
 
-		telaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
 		telaPrincipal = new JFrame("Fluxo de potência fundamental");
 		telaPrincipal.setSize(1300, 650);
 
@@ -119,7 +128,6 @@ public class FluxoDePotenciaFundamental {
 		graficoPotenciaInstantanea.setBounds(5, 110, 500, 190);
 
 		triangulo.setBounds(800, 15, 280, 280);
-		
 		
 
 		graficoTensao.mudaCor(Color.RED);

@@ -1,5 +1,7 @@
 package view;
 
+import java.awt.Window;
+
 import javax.swing.JFrame;
 
 public class TelaPrincipal {
@@ -10,7 +12,8 @@ public class TelaPrincipal {
 		telaPrincipal.setSize(1000, 600);
 		telaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		TelaInicial teste = new TelaInicial(telaPrincipal);
-		//telaPrincipal.setVisible(true);
+		
+		
 		
 	}
 	

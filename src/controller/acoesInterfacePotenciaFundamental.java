@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 
 import model.PotenciaInstantanea;
 import view.TelaInicial;
+import view.TelaPrincipal;
 
 public class acoesInterfacePotenciaFundamental  implements ActionListener{
 	
@@ -103,8 +104,13 @@ public acoesInterfacePotenciaFundamental(JFrame telaprincipal, JPanel painelprin
 	         {
 	        	 
 	        
-	        	 telaprincipal.setVisible(false);
-	        	 new TelaInicial(telaprincipal);
+	         telaprincipal.setVisible(false);
+
+	         telaprincipal.dispose();
+	         
+	         
+	         TelaPrincipal tela = new TelaPrincipal();
+
 	        	 
 	        	 
 	         }

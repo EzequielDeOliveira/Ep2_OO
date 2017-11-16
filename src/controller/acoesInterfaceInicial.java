@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import view.DistorcaoHarmonica;
 import view.FluxoDePotenciaFundamental;
 
 public class acoesInterfaceInicial implements ActionListener {
@@ -27,8 +28,15 @@ public class acoesInterfaceInicial implements ActionListener {
 		String commad = e.getActionCommand();
 		if(commad.equals("fluxo de potencia fundamental")) {
 			
-	     telaprincipal.setVisible(false);
-		new FluxoDePotenciaFundamental(telaprincipal);
+	        telaprincipal.dispose();
+	        FluxoDePotenciaFundamental fluxoDePotencia = new FluxoDePotenciaFundamental();
+		}
+		else if(commad.equals("Distorcao hârmonica")){
+
+	        telaprincipal.dispose();
+	        DistorcaoHarmonica distorcao = new  DistorcaoHarmonica();
+		
+			
 		}
 		
 		

@@ -5,7 +5,8 @@ import java.util.List;
 
 import javax.swing.JFrame;
 
-import model.ConstroiGrafico;
+import model.OndaDaCorrente;
+import model.PotenciaInstantanea;
 import view.TelaPrincipal;
 
 public class teste {
@@ -53,11 +54,29 @@ String b = new String();
 
 		ConstroiGrafico view = new ConstroiGrafico(scores);
 		
-	*/
+	
 		
+		*/
+	
+//		List<Double> scores = new ArrayList<>();
+//		
+//		PotenciaInstantanea t = new PotenciaInstantanea();
+//		
+//		scores = t.GerarPotenciaSimples(220, 0, 39, 35);
+//		
+//		for(int i = 0 ; i < 10 ; i++) {
+//			
+//			
+//			System.out.println(scores.get(i));
+
+ 
 		TelaPrincipal teste = new TelaPrincipal();
+		
+	
 	
 	}
-}
+	}
+
+
 
 

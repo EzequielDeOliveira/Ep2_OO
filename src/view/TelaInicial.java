@@ -15,10 +15,13 @@ import controller.acoesInterfaceInicial;
 
 public class TelaInicial {
 	
+	
+	
 	public TelaInicial(JFrame framePrincipal){
 		
-		framePrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
 		framePrincipal.setLayout(new FlowLayout());
+		framePrincipal.setTitle("QEE");
 		
 		JPanel painelPrincipal = new JPanel(new GridLayout(4,1));
 		
@@ -31,6 +34,8 @@ public class TelaInicial {
 		JPanel segundoPainel = new JPanel();
 		JPanel segundoPainelColuna1 = new JPanel();
 		JButton distorcaoHarmonica = new JButton("Distorção Harmonica");
+		distorcaoHarmonica.setActionCommand("Distorcao hârmonica");
+		distorcaoHarmonica.addActionListener(new acoesInterfaceInicial(framePrincipal,painelPrincipal));
 		
 		JPanel terceiroPainel = new JPanel();
 		JPanel terceiroPainelColuna1 = new JPanel();
